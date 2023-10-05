@@ -3,26 +3,42 @@ package boletin_1_1;
 import java.util.Scanner;
 
 public class Ejercicio9 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Introduce un numero positivo");
-        int num = sc.nextInt();
+
+    public static void main(String[] args) {
+
+
+        for (int i = 1; i <= 100; i++) {
+
+            if (esPerfecto(i)){
+
+                System.out.printf("El numero %d es perfecto\n", i);
+            }
+
+
+        }
+    }
+
+    public static boolean esPerfecto(int a) {
+
+
         int suma = 0;
-        for (int i = 1; i <= num; i++) {
-            if (num % i == 0) {
+
+        for (int i = 1; i <= a; i++) {
+            if (a % i == 0) {
 
                 suma += i;
 
 
             }
-        }
-        if (suma == num) {
 
-            System.out.println("El numero es perfecto");
-        } else {
-            System.out.println("El numero no es perfecto");
         }
+
+        return suma == a;
+
 
     }
+
 }
+
+

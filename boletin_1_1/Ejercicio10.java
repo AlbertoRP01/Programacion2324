@@ -6,20 +6,20 @@ public class Ejercicio10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num;
-        double factorial = 1;
+
         do {
             System.out.println("Introduce un numero entero o 0");
             num = sc.nextInt();
 
         } while (num < 0);
-
+        int factorial = 1;
         for (int i = 1; i <= num; i++) {
-            factorial = factorial * i;
+            factorial *=i;
 
 
 
         }
-        System.out.printf("%d! = %.0f %n", num, factorial);
+        System.out.printf(" El factorial de " + num + " es " + factorial);
     }
 }
 
