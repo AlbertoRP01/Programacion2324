@@ -1,6 +1,5 @@
-package boletin1_4;
+package boletin1_6;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Ejercicio4 {
