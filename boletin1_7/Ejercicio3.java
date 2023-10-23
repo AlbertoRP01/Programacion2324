@@ -1,3 +1,4 @@
+/*
 package boletin1_7;
 
 import ejemplosdeejercicios.MiEntradaSalida;
@@ -23,7 +24,7 @@ public class Ejercicio3 {
 
         int valorDecimal = 0;
         int lastDigitValue = 0;
-        for (int i = 0; i < numRomano.length(); i++) {
+        for (int i = 0; i < numRomano.length();i++) {
             char digit = numRomano.toUpperCase().charAt(i);
             int digitValue = valueOf(digit);
 
@@ -37,15 +38,13 @@ public class Ejercicio3 {
                     valorDecimal += digitValue;
                     lastDigitValue = digitValue;
                 } else {
-                    valorDecimal = digitValue -  lastDigitValue;
-                    lastDigitValue = digitValue;
+                    valorDecimal = lastDigitValue+ digitValue - (2 * lastDigitValue);
                 }
-                
             }
 
         }
 
-        System.out.println("El valor de &S es %d" + numRomano, valorDecimal);
+        System.out.println("El valor de &S es %d" numRomano, valorDecimal);
 
     }
 
@@ -70,3 +69,4 @@ public class Ejercicio3 {
 
     }
 }
+*/

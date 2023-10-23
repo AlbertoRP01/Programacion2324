@@ -1,3 +1,4 @@
+
 package boletin1_7;
 
 
@@ -30,4 +31,5 @@ public class Ejercicio2 {
     }
 
 }
+
 
