@@ -8,7 +8,7 @@ public class Ejercicio10 {
         int[] arrayA = Ejercicio6.devuelveArrayAleatorio();
         arrayA = Ejercicio9.ordenarArray(arrayA, "menor");
 
-        int[]arrayB= borrarElementoDuplicado(arrayA);
+        int[] arrayB = borrarElementoDuplicado(arrayA);
         System.out.println(Arrays.toString(arrayB));
     }
 
@@ -24,14 +24,14 @@ public class Ejercicio10 {
         }
         int[] limpiarArray = new int[tamanoNuevo];
         int contador = 1;
-        limpiarArray[0]= miarray [0];
-        for (int i = 1; i < miarray.length; i++){
-            if (miarray[i]!= miarray[i -1]){
-                limpiarArray[contador]=miarray[i];
+        limpiarArray[0] = miarray[0];
+        for (int i = 1; i < miarray.length; i++) {
+            if (miarray[i] != miarray[i - 1]) {
+                limpiarArray[contador] = miarray[i];
                 contador++;
             }
         }
-return limpiarArray;
+        return limpiarArray;
     }
 
 }

@@ -14,7 +14,7 @@ public class Ejercicio6 {
     }
 
     public static int[] devuelveArrayAleatorio() {
-        int[] miarray = new int[100];
+        int[] miarray = new int[5];
         for (int i = 0; i < miarray.length; i++) {
             miarray[i] = (int) (Math.random() * 10);
         }
