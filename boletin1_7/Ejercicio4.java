@@ -12,7 +12,7 @@ public class Ejercicio4 {
 
         int hora = MiEntradaSalida.leerEnteroDeRango("Introduce las horas que suman", 0,23);
         int min = MiEntradaSalida.leerEnteroDeRango("Introduce los minutos que se suman ", 0, 59);
-        int seg = MiEntradaSalida.leerEnteroDeRango("Introduce los minutos que se suman", 0, 59);
+        int seg = MiEntradaSalida.leerEnteroDeRango("Introduce los segundos que se suman", 0, 59);
 
         int hora2 = MiEntradaSalida.leerEnteroDeRango("Introduce las horas que se suman ", 0, 23);
         int min2= MiEntradaSalida.leerEnteroDeRango("Introduce los minutos que se suman", 0, 59);

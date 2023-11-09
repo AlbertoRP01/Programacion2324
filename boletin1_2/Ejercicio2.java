@@ -9,8 +9,8 @@ public class Ejercicio2 {
 
         System.out.println("Introduce el grado celius");
         double gradosCelsius = Double.parseDouble(sc.nextLine());
+  double gradosF = (gradosCelsius * 9 / 5) +32;
 
-        double gradosF = (gradosCelsius * 9 / 5) +32;
 
         System.out.println("Los grados celsius es "  + gradosCelsius);
         System.out.println(" Los grados  Farennheit " + gradosF);
