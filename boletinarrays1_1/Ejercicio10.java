@@ -1,9 +1,10 @@
 package boletinarrays1_1;
 
-import java.lang.reflect.Array;
+
 import java.util.Arrays;
 
 public class Ejercicio10 {
+
     public static void main(String[] args) {
         int[] arrayA = Ejercicio6.devuelveArrayAleatorio();
         arrayA = Ejercicio9.ordenarArray(arrayA, "menor");
@@ -13,8 +14,9 @@ public class Ejercicio10 {
     }
 
     public static int[] borrarElementoDuplicado(int[] miarray) {
+
         int tamanoNuevo = miarray.length;
-        for (int i = 1; i < miarray.length; i++) {
+        for (int i = 1 ; i < miarray.length; i++) {
             if (miarray[i] == miarray[i - 1]) {
                 tamanoNuevo--;
 
