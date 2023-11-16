@@ -8,11 +8,10 @@ public class Ejercicio11 {
         int[] ArrayB = Ejercicio6.devuelveArrayAleatorio();
         int[] ArrayA2 = Ejercicio9.ordenarArray(ArrayA, "menor");
         int[] ArrayB2 = Ejercicio9.ordenarArray(ArrayB, "menor");
-        int[] ArrayA3 = Ejercicio10.borrarElementoDuplicado(ArrayA2);
-        int[] ArrayB3 = Ejercicio10.borrarElementoDuplicado(ArrayB2);
-        int[]ArraySuma = mantenerElementoDuplicado(ArrayA3, ArrayB3);
+        int[] ArrayA3 = Ejercicio10.borrarElementoDuplicado(ArrayA2, ArrayB2);
+        int[]ArraySuma = mantenerElementoDuplicado(ArrayA2, ArrayB2);
         System.out.println(Arrays.toString(ArrayA3));
-        System.out.println(Arrays.toString(ArrayB3));
+        System.out.println(Arrays.toString(ArrayB2));
         System.out.println(Arrays.toString(ArraySuma));
 
     }
