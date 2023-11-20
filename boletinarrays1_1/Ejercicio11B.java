@@ -2,25 +2,13 @@ package boletinarrays1_1;
 
 import java.util.Arrays;
 
-public class Ejercicio11 {
+public class Ejercicio11B {
     public static void main(String[] args) {
-        int[] ArrayA = Ejercicio6.devuelveArrayAleatorio();
-        int[] ArrayB = Ejercicio6.devuelveArrayAleatorio();
-        int[] ArrayA2 = Ejercicio9.ordenarArray(ArrayA, "menor");
-        int[] ArrayB2 = Ejercicio9.ordenarArray(ArrayB, "menor");
-<<<<<<< HEAD
-        int[] ArrayA3 = Ejercicio10.borrarElementoDuplicado(ArrayA2, ArrayB2);
-        int[]ArraySuma = mantenerElementoDuplicado(ArrayA2, ArrayB2);
-=======
-        int[] ArrayA3 = Ejercicio10.borrarElementoDuplicado(ArrayA2);
-        int[] ArrayB3 = Ejercicio10.borrarElementoDuplicado(ArrayB2);
-
-        // int[] ArrayA3 = Ejercicio10.borrarElementoDuplicado(Ejercicio9.ordenarArray(Ejercicio6.devuelveArrayAleatorio(), "menor"));
-        // int[] ArrayB3 = Ejercicio10.borrarElementoDuplicado(Ejercicio9.ordenarArray(Ejercicio6.devuelveArrayAleatorio(), "menor"));
-        int[] ArraySuma = mantenerElementoDuplicado(ArrayA3, ArrayB3);
->>>>>>> 4e0dc309b293115319af16ee6c91207566900981
-        System.out.println(Arrays.toString(ArrayA3));
-        System.out.println(Arrays.toString(ArrayB2));
+        int[] ArrayA = Ejercicio10.borrarElementoDuplicado(Ejercicio9.ordenarArray(Ejercicio6.devuelveArrayAleatorio(), "menor"));
+        int[] ArrayB = Ejercicio10.borrarElementoDuplicado(Ejercicio9.ordenarArray(Ejercicio6.devuelveArrayAleatorio(), "menor"));
+        int[] ArraySuma = mantenerElementoDuplicado(ArrayA, ArrayB);
+        System.out.println(Arrays.toString(ArrayA));
+        System.out.println(Arrays.toString(ArrayB));
         System.out.println(Arrays.toString(ArraySuma));
 
     }

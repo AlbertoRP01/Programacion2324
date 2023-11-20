@@ -1,69 +1,67 @@
 package boletinarrays1_1;
 
+import ejemplosdeejercicios.Main;
 
-import ejemplosdeejercicios.MiEntradaSalida;
+import java.util.Scanner;
 
-import java.util.Arrays;
 
 public class Ejercicio13 {
-
-    public static final int TAM_PILA = 5;
-    public static final int[] pila = new int[TAM_PILA];
-
-    public static int ultimoElemento = 0;
+    public static final int TAMANO_PILA = 10;
+    public static final int[] pila = new int[TAMANO_PILA];
+    public static int numeroElementos = 0;
+    public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int opcion = 0;
-
-        while (opcion != 3) {
-            menu();
-            opcion = MiEntradaSalida.leerEnteroDeRango("Introduce una opción", 1, 3);
-
-            switch (opcion) {
-                case 1 -> {
-                    int num = MiEntradaSalida.leerEntero("Introduce un número");
-                    apilar(num);
-                }
-                case 2 -> {
-                    int numDesapilado = desapilar();
-                    System.out.println("Has desapilado el número " + numDesapilado);
-                }
-                case 3 -> System.out.println("Adiós");
-                default -> System.out.println("Elige una opción válida");
+        System.out.println("introduzca un numero a la pila");
+        apilar();
+        String respuesta;
+        do{
+            System.out.println("¿desea, apilar, desapilar o salir?");
+            respuesta= sc.nextLine();
+            if (respuesta.equals("apilar")){
+                apilar();
+            } else if (respuesta.equals("desapilar")){
+                desapilar();
             }
-        }
-    }
-    public static void menu() {
-        System.out.println("¿Qué deseas hacer?");
-        System.out.println("1) Apilar");
-        System.out.println("2) Desapilar");
-        System.out.println("3) Salir");
-    }
-    public static void mostrar(){
 
-        System.out.println(Arrays.toString(pila));
+        }while (!respuesta.equals("salir"));
     }
-    public static void apilar(int num) {
-        int ultimoElemento = 0;
-        if (ultimoElemento != pila.length) {
-            pila[ultimoElemento] = num;
-            ultimoElemento++;
+
+    public static void apilar() {
+
+        if (numeroElementos == 10) {
+            System.out.println("no se puede apilar has alcanzado el maximo");
 
         } else {
-            System.out.println("No hay espacio. Libere en caso de que quieras agregar otro valor");
+
+            System.out.println("introduce un numero");
+            int numero = sc.nextInt();
+            sc.nextLine();
+            pila[numeroElementos] = numero;
+            numeroElementos++;
+            mostrar();
+        }
+
+
+    }
+
+    public static void desapilar() {
+        if (numeroElementos == 0) {
+            System.out.println("no se puede desapilar");
+        } else {
+            numeroElementos--;
+            mostrar();
         }
 
     }
-    private static int desapilar() {
-        int ultimoElemento = 0;
-        if (ultimoElemento == 0) {
-            System.out.println("nohay nada que desapialr");
-        }else {
-            ultimoElemento--;
+
+    public static void mostrar() {
+        System.out.println();
+        for (int i = 0; i < numeroElementos; i++) {
+            System.out.print(pila[i ]+ ", ");
+
+
         }
-        return pila[ultimoElemento];
+        System.out.println();
     }
-
-
-
 }

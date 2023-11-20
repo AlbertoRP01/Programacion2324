@@ -1,17 +1,19 @@
 package boletinarrays1_1;
 
-<import ejemplosdeejercicios.MiEntradaSalida;
+import ejemplosdeejercicios.MiEntradaSalida;
 
-public class Ejercicio14 {
+public class Ejercicio14B {
+
     public static final int TAM_COLA = 10;
     public static int[] cola = new int[TAM_COLA];
     public static int primerElemento = 0;
     public static int numElementos = 0;
-    public static int inicio  = 0;
+    public static int inicio = 0;
+
     public static void main(String[] args) {
         int opcion = 0;
 
-        while (opcion != 4){
+        while (opcion != 4) {
             menu();
             opcion = MiEntradaSalida.leerEnteroDeRango("Introduce una opción", 1, 4);
 
@@ -33,48 +35,45 @@ public class Ejercicio14 {
         }
     }
 
-    public static void encolar (int num){
-        if (numElementos < TAM_COLA){
+    public static void encolar(int num) {
+        if (numElementos < TAM_COLA) {
             cola[(primerElemento + numElementos) % TAM_COLA] = num;
             numElementos++;
-
-        }else {
+        } else {
             System.out.println("La cola está llena");
         }
     }
 
-    public static int desencolar (){
-        if (numElementos > 0){
+    public static int desencolar() {
+        if (numElementos > 0) {
             int numDesencolado = cola[inicio];
-            //inicio = (inicio + 1) % TAM_COLA;
+            inicio = (inicio + 1) % TAM_COLA;
             numElementos--;
-            inicio++;
+            primerElemento++;
             return numDesencolado;
-        }else {
+        } else {
             System.out.println("No hay elementos en la cola");
             return -1;
         }
     }
 
-    public static void mostrarCola(){
+    public static void mostrarCola() {
+        int almacen = inicio;
 
         System.out.print("Cola --> [");
-        int almacen = inicio;
         for (int i = 0; i < numElementos; i++) {
-
             System.out.print(cola[inicio]);
-            //inicio = (inicio + 1) % TAM_COLA;
-            inicio++;
-            if (i < numElementos - 1){
+            inicio = (inicio + 1) % TAM_COLA;
+            if (i < numElementos - 1) {
                 System.out.print(", ");
             }
-
         }
-        inicio= almacen;
         System.out.println("]");
+
+        inicio = almacen;
     }
 
-    public static void menu(){
+    public static void menu() {
         System.out.println("¿Qué deseas hacer?");
         System.out.println("1) Encolar");
         System.out.println("2) desencolar");
@@ -83,3 +82,4 @@ public class Ejercicio14 {
     }
 
 }
+
