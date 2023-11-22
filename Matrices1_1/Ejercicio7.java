@@ -1,6 +1,9 @@
 package Matrices1_1;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 430af85d10e20306535918554f78fb3de5695a8a
 public class Ejercicio7 {
     public static void main(String[] args) {
         int[][] matriz = {{1, 3, 5}, {0, 2, 7}};
@@ -26,4 +29,7 @@ public class Ejercicio7 {
         return true;
     }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 430af85d10e20306535918554f78fb3de5695a8a
