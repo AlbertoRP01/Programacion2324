@@ -10,6 +10,11 @@ public class PrincipalAlumnos {
         matrizVisible es una matriz de booleanos que nos servirá para saber si una celda está visible u oculta.
         Por defecto, todas las celdas estarán ocultas, por lo que inicializamos la matriz a false.
          */
+
+        char[][] m= {
+                {A,B,C,D},
+                {E,F,G}
+        }
         ocultarTodaLaMatriz(matrizVisible);
 
 
