@@ -29,33 +29,5 @@ public class Ejercicio10 {
         }
         return simetrica;
     }
-
-
-    int[][] matriz = {{1, 3, 1}, {1, 3, 1}};
-        if(
-
-    matrizEspejo(matriz))
-
-    {
-        System.out.println(" Es simetrico");
-
-    }else
-
-    {
-        System.out.println("No es simetrico");
-    }
-        Ejercicio3.linea(matriz);
 }
-
-    public static boolean matrizEspejo(int[][] a) {
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a[0].length / 2; j++) {
-                if (a[i][j] != a[i][a[0].length - 1 - j]) {
-                    return false;
-                }
-            }
-
-        }
-        return true;
-    }
 
