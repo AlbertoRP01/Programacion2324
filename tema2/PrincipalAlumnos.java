@@ -13,19 +13,7 @@ public class PrincipalAlumnos {
         Por defecto, todas las celdas estarán ocultas, por lo que inicializamos la matriz a false.
          */
 
-        char[][] matrizVisible = {
-                {'A', 'B', 'C', 'D'},
-                {'E', 'F', 'G', 'H'},
-                {'A', 'B', 'C', 'D'},
-                {'A', 'B', 'C', 'D'}
-        };
-        char[][] matrizOC = {
-                {'#', '#', '#', '#'},
-                {'#', '#', '#', '#'},
-                {'#', '#', '#', '#'},
-                {'#', '#', '#', '#'}
-        };
-        ocultarTodaLaMatriz(matrizVisible);
+
 
 
         /*
@@ -61,6 +49,7 @@ public class PrincipalAlumnos {
                 System.out.print(matriz[i][j] + "   ");
 
             }
+
         }
     }
 
@@ -86,25 +75,29 @@ public class PrincipalAlumnos {
             }
 
         }
+    }
 
-
-        /**
-         * Rellena la matriz con los valores de la A a la letra final (que vendrá determinada por A + TAM * TAM / 2) dos veces
-         *
-         * @param matriz
-         */
-        public static void fillMatrix ( char[][] matriz){
-            int acumulador = 0;
-            for (int i = 0; i < matriz.length; i++) {
-                for (int j = 0; j < matriz[0].length; j++) {
-                    acumulador = matriz[i][j] + TAM * TAM / 2;
-                    acumulador++;
-                }
-
+    /**
+     * Rellena la matriz con los valores de la A a la letra final (que vendrá determinada por A + TAM * TAM / 2) dos veces
+     *
+     * @param matriz
+     */
+    public static void fillMatrix(char[][] matriz) {
+        char palabra = 'A';
+        char[] matriz2 = new char[TAM * TAM];
+        int acumulador = 0;
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[0].length; j++) {
 
             }
+
+        }
+        for (int i = matriz.length + 1, j = matriz[0].length + 16; i <= j; i += 2) {
+            acumulador++;
+
         }
     }
+
 
     /**
      * Desordena la matriz
@@ -113,7 +106,7 @@ public class PrincipalAlumnos {
      */
     private static void randomizeMatrix(char[][] matriz) {
         // Una vez rellena la matriz, la desordenamos
-        
+
     }
 
     /**
