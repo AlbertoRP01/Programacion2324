@@ -1,6 +1,6 @@
 package boletinarrays1_1;
 
-import ejemplosdeejercicios.MiEntradaSalida;
+import BoletinObjetos4_1.MiEntradaSalida;
 
 public class Ejercicio14B {
 

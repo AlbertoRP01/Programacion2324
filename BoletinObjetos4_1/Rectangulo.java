@@ -30,7 +30,7 @@ public class Rectangulo {
         if (ancho > 0 && ancho < MAX_LONGITUD_ANCHO) {
             this.ancho = ancho;
         } else {
-                throw new IllegalArgumentException("El ancho no puede ser 0 o negativo");
+            throw new IllegalArgumentException("El ancho no puede ser 0 o negativo");
         }
 
     }
@@ -40,13 +40,15 @@ public class Rectangulo {
             this.longitud = longitud;
         } else {
 
-           throw new IllegalArgumentException("La longitud no puede ser 0 o negativa");
+            throw new IllegalArgumentException("La longitud no puede ser 0 o negativa");
         }
     }
-    public double CalcularPerimetro (){
-        return 2* longitud + 2 * ancho;
+
+    public double CalcularPerimetro() {
+        return 2 * longitud + 2 * ancho;
     }
-    public double cacularArea (){
-        return  longitud * ancho;
+
+    public double cacularArea() {
+        return longitud * ancho;
     }
 }
