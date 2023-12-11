@@ -1,7 +1,7 @@
 package Boletin4_1;
 
-import BoletinObjetos4_1.MiEntradaSalida;
-import EjemploEduardo.ImprimirMenu;
+
+
 import ejemplosdeejercicios.MiEntradaSalida;
 
 import java.util.Scanner;
@@ -15,7 +15,7 @@ public class Principal {
         int opcion;
         do {
 
-            opcion = MiEntradaSalida.leerEnteroDeRango("Introduce la operacion que le gustaria hacer ", 1, 4);
+            opcion = MiEntradaSalida.leerEnteroDeRango("Introduce la operacion que le gustaria hacer ",1, 4);
             imprimeMenu();
             switch (opcion) {
                 case 1:
