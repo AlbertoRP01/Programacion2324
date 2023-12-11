@@ -1,6 +1,8 @@
+package matriz_Memoria;
+
 import java.util.Scanner;
 
-public class MiEntradaSalida {
+public class MiEntradaSalidadMemoria {
     private static Scanner scanner = new Scanner(System.in);
 
     public static char leerChar(String mensaje) {
@@ -17,3 +19,5 @@ public class MiEntradaSalida {
         return num;
     }
 }
+
+

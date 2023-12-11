@@ -14,7 +14,7 @@ public class Ejercicio4 {
 
         int suma = 0;
 
-        //crea un array de 10 posiciones para guardar cuantas veces se repiute los últimos numeros
+        //        //crea un array de 10 posiciones para guardar cuantas veces se repiute los últimos numeros
         int[] terminaciones = new int[10];
 
         //creacion de los 6000 números aleatorios

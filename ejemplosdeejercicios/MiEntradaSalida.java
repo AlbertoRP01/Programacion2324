@@ -15,7 +15,6 @@ public class MiEntradaSalida {
     /**
      * Lee un entero y comprueba si es positivo
      * @param mensaje lee el mensaje que ha insertado el usuario
-     * @param positivo valor positivo
      * @return devuelve un valor positivo
      */
     public static int LeerEnteroPositivo(String mensaje){
@@ -75,7 +74,23 @@ public class MiEntradaSalida {
         return sn;
     }
 
-    public static void cerrarScanner(){
-        sc.close();
+    public static double leerDouble(String mensaje) {
+
+        double res = 0;
+        boolean ok = false;
+
+        do {
+            System.out.println(mensaje);
+            try {
+                res = Double.parseDouble(sc.nextLine());
+                ok = true;
+            }
+            catch (NumberFormatException e) {
+                System.out.println("Tienes que introducir un número");
+            }
+
+        } while(!ok);
+
+        return res;
     }
 }
