@@ -2,7 +2,7 @@
 package boletin1_7;
 
 
-import ejemplosdeejercicios.MiEntradaSalida;
+import BoletinObjetos4_1.MiEntradaSalida;
 
 public class Ejercicio2 {
 

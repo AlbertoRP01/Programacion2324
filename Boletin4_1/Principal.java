@@ -1,5 +1,6 @@
 package Boletin4_1;
 
+import BoletinObjetos4_1.MiEntradaSalida;
 import EjemploEduardo.ImprimirMenu;
 import ejemplosdeejercicios.MiEntradaSalida;
 
@@ -39,7 +40,7 @@ public class Principal {
             }
 
         } while (opcion != 5);
-     
+
     }
 
     private static void imprimeMenu() {
