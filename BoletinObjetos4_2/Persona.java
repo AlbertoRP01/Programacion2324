@@ -1,6 +1,8 @@
 package BoletinObjetos4_2;
 
 import java.time.LocalDate;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
 
 public class Persona {
     public static final char[] LETRAS = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X',
@@ -53,13 +55,22 @@ public class Persona {
         this.peso = peso;
     }
 
-    public char getLetraDni(){
+    public char getLetraDni() {
         return LETRAS[dni % 23];
     }
-    public float getImc(){
-        return peso /(altura * altura);
+
+    public float getImc() {
+        return peso / (altura * altura);
     }
-    public int numDias(){
+
+    public static void numDias() {
+        LocalDate birthay = LocalDate.of(2001, 10, 12);
+        LocalDate today = LocalDate.now();
+        Period p = Period.between(birthay, today);
+        long p2 = ChronoUnit.DAYS.between(birthay, today);
+        System.out.println("Eres todavia joven" + p2);
 
     }
+
 }
+
