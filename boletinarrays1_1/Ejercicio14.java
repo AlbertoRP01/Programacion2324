@@ -1,5 +1,7 @@
 package boletinarrays1_1;
 
+import ejemplosdeejercicios.MiEntradaSalida;
+
 public class Ejercicio14 {
     public static final int TAM_COLA = 10;
     public static int[] cola = new int[TAM_COLA];

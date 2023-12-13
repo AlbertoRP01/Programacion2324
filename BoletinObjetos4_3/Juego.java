@@ -41,10 +41,8 @@ public class Juego {
         if (baraja.length - cartasRepartidas >= (numCartas * numJugadores)) {
             for (int i = 0; i < numJugadores; i++) {
                 System.out.println("repartiendo cartas al jugador" + (i + 1));
-                for (int j = 1; j < numCartas; j++)
+                for (int j = 1; j < numCartas; j++){
                     System.out.println("\t" + baraja[numCartas * i + j + cartasRepartidas]);
-                {
-
                 }
             }
         } else

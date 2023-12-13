@@ -1,5 +1,7 @@
 package boletinarrays1_1;
 
+import ejemplosdeejercicios.MiEntradaSalida;
+
 public class Ejercicio14B {
 
     public static final int TAM_COLA = 10;
