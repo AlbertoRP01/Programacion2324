@@ -48,4 +48,7 @@ public class Juego {
         } else
             throw new JuegoExcception("No hay suficientes cartas para repartir ");
     }
+    public void cartasRestantes(){
+
+    }
 }
