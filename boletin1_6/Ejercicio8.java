@@ -1,8 +1,6 @@
 package boletin1_6;
 
 
-import BoletinObjetos4_1.MiEntradaSalida;
-
 public class Ejercicio8 {
 
     public static void main(String[] args) {

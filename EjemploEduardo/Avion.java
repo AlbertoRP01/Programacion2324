@@ -55,12 +55,6 @@ public class Avion {
                 getUltimaRevision();
     }
 
-    public void addRevision(int Revisión ){
-        for(int i= NUM_MAX_REVISIONES-1; i>=0; i++){
-            if(revisiones[i] ==null){
-                revisiones[i]=r;
-                break;
-            }
-        }
-    }
+
+
 }

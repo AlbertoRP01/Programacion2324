@@ -1,8 +1,5 @@
 package boletin1_7;
 
-import BoletinObjetos4_1.MiEntradaSalida;
-
-
 
 public class Ejercicio4 {
     public static void main(String[] args) {

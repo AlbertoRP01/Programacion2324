@@ -30,6 +30,30 @@ public class MiEntradaSalida {
 
         return integer;
     }
+    public static double solicitarDouble(String mensaje) {
+        // Variable que almacenará el entero introducido por teclado.
+        double decimal = 0;
+        // Variable que almacenará un booleano que indicará si se le debe volver a pedir el dato al usuario.
+        boolean flag = true;
+
+        while (flag) {
+            // Pedimos el  decimal por pantalla.
+            System.out.println(mensaje);
+            // Comprobamos si el usuario está introduciendo algo correcto usando la excepción del método parseDouble.
+            try {
+                decimal = Double.parseDouble(sc.nextLine());
+                // Si llegamos hasta aquí, es porque el usuario ha introducido un dato correcto y no se ha lanzado ninguna excepción.
+                flag = false;
+            }
+            // Si se lanza la excepción, informamos al usuario de su error.
+            catch (NumberFormatException e) {
+                System.out.println("Ha introducido un dato incorrecto.");
+            }
+
+        }
+
+        return decimal;
+    }
 
     public static int solicitarEnteroPositivo(String mensaje) {
         // Variable que almacenará el entero introducido por teclado.

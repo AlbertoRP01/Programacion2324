@@ -1,36 +1,61 @@
 package BoletinObjetos4_1;
 
 public class Cuenta {
+    private int numIngreso;
     private int numReintegro;
-    private int numIngresos;
     private double saldo;
+
 
     public Cuenta(double saldoInicial) {
         setSaldo(saldoInicial);
-        this.numIngresos = 0;
-        this.saldo = 0;
+        this.numReintegro = 0;
+        this.numIngreso = 0;
     }
 
-    public void setSaldo(double saldoInicial) {
-        if (saldoInicial >= 0) {
+    private void setSaldo(double saldoInicial) {
+
+        if (saldoInicial < 0) {
             saldo = saldoInicial;
+
         } else {
-            System.out.println("El saldo inicial es ");
+            System.out.println("El saldo Inicial no puede ser negativo");
+        }
+
+
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+
+    public void hacerReintegro(double cantidadRetirar) {
+
+        if (cantidadRetirar <= saldo && cantidadRetirar > 0) {
+            saldo -= cantidadRetirar;
+            numReintegro++;
+
+        } else {
+            System.out.println("No has introducido la cantidad que puedes retirar ");
         }
 
     }
 
-    public int getNumIngresos() {
-        return numIngresos;
+    public void hacerIngreso(double cantidadIngreso) {
+        cantidadIngreso += saldo;
+        numIngreso++;
+
     }
 
-    public void HacerNumIngresos(double CantidadIngresar) {
-
-        if (CantidadIngresar > 0) {
-            saldo += CantidadIngresar;
-            numIngresos++;
-        } else {
-            System.out.println("No se puede ingresar el dinero");
-        }
+    public void ConsultarCuenta() {
+        System.out.println("saldo : " + saldo);
+        System.out.println("El numero de ingresos es: " + numIngreso);
+        System.out.println("El numero de reintegro es :" + numReintegro);
     }
+
 }
+
+
+
+
+

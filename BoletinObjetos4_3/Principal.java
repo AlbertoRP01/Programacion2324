@@ -1,4 +1,4 @@
-package Boletin4_3;
+package BoletinObjetos4_3;
 
 public class Principal {
     public static final String[] palos = {"Espadas", "Oros", "Bastos", "Copas"};

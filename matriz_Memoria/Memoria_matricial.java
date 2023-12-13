@@ -1,4 +1,4 @@
-package tema2;
+package matriz_Memoria;
 
 
 import java.util.Scanner;

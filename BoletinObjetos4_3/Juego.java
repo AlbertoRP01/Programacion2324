@@ -1,4 +1,4 @@
-package Boletin4_3;
+package BoletinObjetos4_3;
 
 import java.util.Random;
 
