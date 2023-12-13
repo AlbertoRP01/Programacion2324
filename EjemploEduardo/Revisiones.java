@@ -32,7 +32,7 @@ public class Revisiones {
     }
 
     public long getPeriodoValidez() {
-      return  periodoValidez;
+      return (long) periodoValidez;
     }
 
     @Override
