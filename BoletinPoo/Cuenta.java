@@ -16,6 +16,8 @@ public class Cuenta {
         return saldo;
     }
 
+
+
     public void ingresarDinero(double dineroAIngresar) throws CuentaException {
         if (dineroAIngresar <= 0) {
             throw new CuentaException(" Debes ingresar una cantidad positiva");
@@ -23,6 +25,7 @@ public class Cuenta {
         this.saldo += dineroAIngresar;
 
     }
+
 
     public void sacarDinero(double dineroASacar) throws CuentaException, CuentaCreditoException {
         if (dineroASacar <= 0) {
@@ -35,5 +38,11 @@ public class Cuenta {
         saldo -= dineroASacar;
     }
 
+    @Override
+    public String toString() {
+        return "Cuenta{" +
+                "saldo=" + saldo +
+                '}';
+    }
 }
 
