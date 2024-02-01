@@ -1,4 +1,4 @@
-package BoletinPoo;
+package Boletin5_1_Ejercicio1;
 
 public class CuentaCredito extends Cuenta {
     public static final double CREDITO_DEFAULT = 100;
@@ -67,14 +67,16 @@ public class CuentaCredito extends Cuenta {
     @Override
     public void sacarDinero(double dineroASacar) throws CuentaException, CuentaCreditoException {
         if (dineroASacar > getSaldo() + getCredito()) {
-            throw new CuentaCreditoException("Has llegado a su limite de credito");
+            throw new CuentaCreditoException("Ha llegado a su limite de credito");
 
         }
         if (dineroASacar <= getSaldo()) {
             super.sacarDinero(dineroASacar);
         } else {
-            dineroASacar -= getSaldo();
-            super.sacarDinero(getSaldo());
+            if (getSaldo() > 0) {
+                dineroASacar -= getSaldo();
+                super.sacarDinero(getSaldo());
+            }
             this.credito -= dineroASacar;
         }
 

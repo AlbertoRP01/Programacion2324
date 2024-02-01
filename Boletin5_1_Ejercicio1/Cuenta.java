@@ -1,4 +1,4 @@
-package BoletinPoo;
+package Boletin5_1_Ejercicio1;
 
 public class Cuenta {
     public static final double SALDO_DEFAULT = 0;

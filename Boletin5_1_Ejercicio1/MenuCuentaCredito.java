@@ -1,4 +1,4 @@
-package BoletinPoo;
+package Boletin5_1_Ejercicio1;
 
 import java.util.Scanner;
 
@@ -26,9 +26,7 @@ public class MenuCuentaCredito {
                     double dineroSacar = sc.nextDouble();
                     try {
                         cuenta.sacarDinero(dineroSacar);
-                    } catch (CuentaException e) {
-                        System.out.println(e.getMessage());
-                    } catch (CuentaCreditoException e) {
+                    } catch (CuentaException | CuentaCreditoException e) {
                         System.out.println(e.getMessage());
                     }
                     break;
@@ -45,7 +43,7 @@ public class MenuCuentaCredito {
     }
 
     public static void menu() {
-        System.out.println("Bienvenido a su cuenta selecciona alguna de estas opciones");
+        System.out.println("Bienvenido a su cuenta. Seleccione una de estas opciones");
         System.out.println("1.Ingresar dinero");
         System.out.println("2. Sacar dinero");
         System.out.println("3. Mostrar saldo y credito");
