@@ -1,21 +1,20 @@
 package boletin5_1_Ejercicio3;
 
-public class Magos extends Personaje {
+import java.util.Arrays;
+
+public class Mago extends Personaje {
     public static final int CAPACIDAD_HECHIZOS = 4;
     public static final int DAÑO_HECHIZO = 10;
     public static final int INTELIGENCIA_MIN = 17;
     public static final int FUERZA_MAX = 15;
     private String[] hechizos;
 
-    public Magos(String nombre, Raza razas, int fuerza, int inteligencia, int vidaMaxima, int vidaActual, String[] hechizos) {
-        super(nombre, razas, fuerza, inteligencia, vidaMaxima, vidaActual);
+    public Mago(String nombre, Raza razas, int fuerza, int inteligencia, int vidaMaxima) throws PersonajeException {
+        super(nombre, razas, fuerza, inteligencia, vidaMaxima);
         hechizos = new String[CAPACIDAD_HECHIZOS];
 
     }
 
-    public Magos(String nombre, Raza razas, int fuerza, int inteligencia, int vidaMaxima, int vidaActual) {
-        super(nombre, razas, fuerza, inteligencia, vidaMaxima, vidaActual);
-    }
 
     @Override
     public void setFuerza(int fuerza) throws Exception {
@@ -33,7 +32,7 @@ public class Magos extends Personaje {
         super.setInteligencia(inteligencia);
     }
 
-    private void aprenderHechixo(String hechizo) throws Exception {
+    public void aprenderHechizo(String hechizo) throws PersonajeException{
         boolean lotengo = false;
         int posVacia = -1;
 
@@ -73,6 +72,19 @@ public class Magos extends Personaje {
         if (personaje.getVidaActual() == 0) {
             throw new PersonajeException("El personaje esta muerto");
         }
+
+        personaje.setVidaActual(personaje.getVidaActual() - DAÑO_HECHIZO);
+        hechizos[posHechizo] = null;
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Mago{");
+        sb.append("hechizos").append(Arrays.toString(hechizos));
+        sb.append(super.toString());
+        sb.append('}');
+        return sb.toString();
+    }
 }
+
+

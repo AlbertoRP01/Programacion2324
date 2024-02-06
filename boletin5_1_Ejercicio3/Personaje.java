@@ -17,7 +17,8 @@ public class Personaje {
     private int vidaMaxima;
     private int vidaActual;
 
-    public Personaje(String nombre, Raza razas, int fuerza, int inteligencia, int vidaMaxima, int vidaActual) {
+
+    public Personaje(String nombre, Raza razas, int fuerza, int inteligencia, int vidaMaxima) throws PersonajeException {
         this.nombre = nombre;
         this.razas = razas;
         this.fuerza = fuerza;
@@ -60,6 +61,7 @@ public class Personaje {
 
     public void setInteligencia(int inteligencia) throws Exception {
         if (inteligencia > INTELIGENCIA_MAX || inteligencia < INTELIGENCIA_MIN) {
+
             throw new Exception("El valor de la inteligencia no valido");
         }
         this.inteligencia = inteligencia;
@@ -69,7 +71,10 @@ public class Personaje {
         return vidaMaxima;
     }
 
-    public void setVidaMaxima(int vidaMaxima) {
+    public void setVidaMaxima(int vidaMaxima) throws Exception {
+        if (VIDA_MAX < VIDA_MIN || fuerza > VIDA_MAX) {
+            throw new PersonajeException("");
+        }
         this.vidaMaxima = vidaMaxima;
     }
 
@@ -78,7 +83,13 @@ public class Personaje {
     }
 
     public void setVidaActual(int vidaActual) {
-        this.vidaActual = vidaActual;
+        if (vidaActual < VIDA_MIN) {
+            this.vidaActual = VIDA_MIN;
+        } else if (vidaActual > VIDA_MAX) {
+            this.vidaActual = VIDA_MAX;
+        } else
+
+            this.vidaActual = vidaActual;
     }
 
 }
