@@ -1,3 +1,4 @@
+
 package Boletin5_1_Ejercicio2;
 
 import ejemplosdeejercicios.MiEntradaSalida;
@@ -5,6 +6,7 @@ import ejemplosdeejercicios.MiEntradaSalida;
 import java.util.Scanner;
 
 public class MenuVehiculo {
+    /*
     private static final int MAX_VEHICULOS = 200;
     private static final Vehiculo[] ListaVehiculos = new Vehiculo[MAX_VEHICULOS];
 
@@ -63,6 +65,7 @@ public class MenuVehiculo {
         }
         if (ListaVehiculos[posVehiculo].getMatricula().equals(matricula)) break;
     }
+
     if(posVehiculo != vehiculosAlta){
         System.out.println("""
                 El vehiculo seleccionado con matricula: %s 
@@ -70,5 +73,5 @@ public class MenuVehiculo {
                 conlleva un precio total de %.2f€ 
                 """,matricula, dias, ListaVehiculos[posVehiculos].getPrecioAlquiler(dias));
     }
-
+*/
 }
