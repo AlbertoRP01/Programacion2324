@@ -1,5 +1,7 @@
 package boletin5_1_Ejercicio3;
 
+import Boletin5_2_Ejercicio1.CreableEstadisticas;
+
 public class ArrayP implements CreableEstadisticas {
     public static final int NUM_MAX_PERSONAJES = 100;
 

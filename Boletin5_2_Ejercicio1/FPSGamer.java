@@ -1,4 +1,4 @@
-package Boletin5_2_;
+package Boletin5_2_Ejercicio1;
 
 public class FPSGamer implements Gamer {
 
